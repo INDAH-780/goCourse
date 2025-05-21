@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// import "fmt"
+type Employee struct {
+	FirstName string
+	LatsName  string
+	Age       int
+}
+
+func main() {
+	//Pascal case: used for naming types such as structs, interfaces, enums
+	//eg Userinfo
+	//snake_case, naming variables constants
+	//e.g user_id, first_name
+
+	//uppercase: used exclusively for naming constants
+	//mixed case: similar to camel case but starts with a lowercase letter e.g isValid
+
+	const MAXRETRIES = 5 //upper case
+	var employeeID = 1001 //mixed case
+	fmt.Println("EmployeeID: ", employeeID)
+
+}

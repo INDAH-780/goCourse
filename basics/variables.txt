@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+var middleName = "Cane"
+
+func main() {
+
+	fmt.Println(middleName)
+	// defaultvalues
+	// numeric types: 0
+	// boolean types: false
+	//string type : """
+	// pointers, slice, maps, functions, and structs: nil
+
+	//---scope
+	//variables in go are block scope
+}
