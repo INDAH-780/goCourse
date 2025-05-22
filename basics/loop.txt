@@ -1,0 +1,80 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	//A. For loop
+
+	//simple iteration over a range
+	// for i := 1; 1<=5; i++ {
+	// 	fmt.Println(i)
+	// }
+
+	// iterate over collection
+	// numbers := []int{1, 2, 3, 4, 5, 6}
+	// for index, value := range numbers {
+	// 	fmt.Printf("Index: %d, value: %d\n", index, value)
+	// }
+
+	// break and continous statement
+	// for i := 1; i<10; i++ {
+	// 	if i%2 == 0 {
+	// 		continue
+	// 	}
+	// 	fmt.Println("Odd number:", i)
+	// 	if i == 5 {
+	// 		break
+	// 	}
+	// }
+	// rows := 5
+	// //outer loop
+	// for i :=1; i <=rows; i++ {
+	// 	//iner loop for spaces before stars
+	// 	for j := 1; j <=rows -i; j++ {
+	// 		fmt.Print(" ")
+	// 	}
+	// 	//inner loop for stars
+	// 	for k :=1; k<=2*i-1; k++ {
+	// 		fmt.Print("*")
+	// 	}
+	// 	fmt.Println() //MOVE to THE NEXT LINE
+
+	// }
+
+	//ability to iterate over a range of integers directly
+	// for i := range 10 {
+	// 	i++
+	// 	fmt.Println(i)
+	// }
+	// fmt.Println("we have a lift up!")
+
+	//B for loop as a while loop, repeatedly executing a block of code
+
+	// i := 1
+	// for i <= 5 {
+	// 	fmt.Println("Interaction:", i)
+	// 	i++
+	// }
+
+	//for loop as while loop with break
+	// sum := 0 
+	// for {
+	// 	sum += 10
+	// 	fmt.Println("sum:", sum)
+	// 	if sum >= 50 {
+	// 		break
+	// 	}
+	// }
+
+	//continous statements
+	num := 1 
+	for num <= 10 {
+		if num %2 == 0 {
+			num ++
+			continue
+		}
+		fmt.Println("Odd number:",num)
+		num++
+	}
+}

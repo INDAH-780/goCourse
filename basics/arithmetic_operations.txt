@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func main() {
+	// varible declaration
+	var a, b int = 10, 3
+	var result int
+// note the difference in the answers for both additions
+	result = a + b
+	fmt.Println("Addition: ", result)
+
+	result = a - b
+	fmt.Println("subtraction: ", result)
+
+	result = a * b
+	fmt.Println("multiplication: ", result)
+
+	result = a / b
+	fmt.Println("Division: ", result)
+
+	result = a %  b
+	fmt.Println("Addition: ", result)
+
+	const p float64 = 22/7.0
+	fmt.Println(p)
+
+	//difference overflow iwth signed integers and unsigned intergers
+	//for signed integers - overflow turns to be the negative of that number while for unsigned, the overflow turns to 0
+	
+}
