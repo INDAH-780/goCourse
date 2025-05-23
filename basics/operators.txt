@@ -1,0 +1,28 @@
+// package main
+
+
+// func main() { 
+// Logical operatord
+! ( logical NOT)
+|| (Logical OR)
+&& (Logical AND)
+
+
+//BITWISE OPERATOR
+
+& (bitwise AND)
+| (bitwise OR)
+^ (bitwise XOR)
+&^ (bit ckear, AND NOT)
+<< (left shift)
+>> (right shift)
+
+//comparism operators
+
+== (equal)
+!= (not equal)
+<(less than)
+<= (less than or equal to)
+> (greater than)
+>= (greater than or equal to)
+// }

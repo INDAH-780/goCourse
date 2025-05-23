@@ -1,0 +1,67 @@
+package main
+
+import "fmt"
+
+func main() {
+	//var  [size]elementType
+	//var numbers[5]int  // this is a blank array
+	// fmt.Println(numbers)
+	// //updating arrays
+	// numbers[4] = 20
+	// fmt.Println(numbers)
+
+	// fruits := [4]string{"Apple", "Banana", "Orange", "Grapes"}
+	// fmt.Println("fruits array:", fruits)
+
+	// // printing an element for a particular index
+	// fmt.Println("Third element:", fruits[2])
+
+	// // copying an array
+	// originalArray := [3]int{1, 2, 3}
+	// copiedArray := originalArray
+	// copiedArray[0] = 100
+	// fmt.Println("Original array:", originalArray)
+	// fmt.Println("copied array:", copiedArray)
+
+	// // iterating elements of an array
+	// //to discard something like say tehe index wheich we defined below, we use underscore (_)
+	
+	// for i := 0; i < len(numbers); i++ {
+	// 	fmt.Println("Element at index" , i, ":", numbers[i])
+	// }
+	// for index, value := range numbers {
+	// 	fmt.Printf("Index: %d, Value: %d\n", index, value)
+	// }
+
+	// a, b := someFunction()
+	// fmt.Println(a)
+	// fmt.Println(b)
+	// // now someFunction is expecting 2 arguments, say u wantbjust 1 without altering the function
+	// // thats where underscore comes in
+	// c, _ := someFunction()
+	// fmt.Println(c)
+
+	// //comparing arrays
+	// array1 := [3]int{1, 2, 3}
+	// array2 := [3]int{1, 2, 3}
+
+	// fmt.Println("Array1 is equal to array 2:", array1 == array2)
+	// var matrix [3][3]int = [3][3]int{
+	// 	{1, 2, 3},
+	// 	{4, 5, 6},
+	// 	{7, 8, 9},
+	// }
+	// fmt.Println(matrix)
+// addresses &, pointers *
+	originalArray := [3]int{1, 2, 3}
+	var copiedArray  *[3]int
+	copiedArray = &originalArray
+	copiedArray[0] = 100
+	fmt.Println("Original array:", originalArray)
+	fmt.Println("copied array:", copiedArray)
+}
+
+// // how underscores work
+// func someFunction() (int, int){
+// 	return 1, 2
+// }

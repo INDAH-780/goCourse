@@ -1,0 +1,39 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+// computer chooses a random number between 1 and 100, if the number the user gues is lower the computer will give hint that the number is either higher or lower
+func main() {
+	//theres actually a package to generate random numbers known as the rand package which is part of the go standard library
+	source := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(source)
+
+	//setting range and boundaries, so we intend to generate a random number between 1 and 100
+	target := random.Intn(100) + 1
+
+	fmt.Println("Welcome to the Guessing game!")
+	fmt.Println("I have chosen a number between 1 and 100")
+	fmt.Println("Can you gguess what it is?")
+
+	//storing user input
+	var guess int
+	for {
+		fmt.Println("Enter your guess:")
+		fmt.Scanln(&guess) // stor the input inside the address of the variable guess
+
+		//check if guess is corrrect
+		if guess == target {
+			fmt.Println("congratulationd! you guesed the correct number!")
+			break
+		} else if guess < target {
+			fmt.Println("Too low! Try guessing a higher number")
+		}else {
+			fmt.Println(fmt.Println("Too high! try guessing a lower number"))
+		}
+	}
+
+}

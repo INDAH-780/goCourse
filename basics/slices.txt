@@ -1,0 +1,57 @@
+package main
+
+import (
+	"fmt"
+	"slices"
+)
+
+
+func main() { 
+// syntax
+//var sliceName[]ElemetType
+// var numbers []int
+// var numbers1 = []int{1, 2, 3}
+
+// numbers2 := []int{9, 8,7}
+// // cap function checks the capacity of a slice function
+// // make is a built-in function used to allocate and initialize slices, maps, and channels. It serves as an allocator, ensuring these data structures are ready for immediate use, unlike new, which only allocates memory and returns a pointer to the zero value of the type
+// slice := make([]int, 5)
+a := [5]int{1,2,3,4,5}
+slice1 := a[1:4]  //will not include the value at index 4
+
+fmt.Println(slice1)
+//appending elements to a slice
+slice1 = append(slice1, 6, 7)
+fmt.Println(slice1)
+
+//copying a slice, we use makke function to copy
+sliceCopy := make([]int,len(slice1))
+copy(sliceCopy, slice1)
+fmt.Println("sliceCopy:", sliceCopy)
+
+//nil slice; the 0 value of a slice is nil,has a length and capacity of 0, it also those not reference any array
+//var nilSlice []int
+//comparing slices
+if slices.Equal(slice1, sliceCopy){
+	fmt.Println("Slice1 is equal to sliceCopy")
+}
+
+//multidimensional data structures using slices
+twoD := make([][]int, 3) //outer length 3
+for i := 0; i<3; i++ {
+	innerLen := i +1  //inner length
+	twoD[i] = make([]int, innerLen)
+	for j := 0; j < innerLen; j++ {
+		twoD[i][j] = i + j
+		fmt.Printf("adding value %d in outer slice at index %d, and in inner slice index of %d\n", i+j, i, j)
+	}
+}
+fmt.Println(twoD)
+
+//slice in slices
+//syntax slice[low:high]
+slice2 := slice1[2:4]
+fmt.Println("slice2:",slice2)
+fmt.Println("the capacity slice2 is", cap(slice2))
+fmt.Println("the length slice2 is", len(slice2))
+}

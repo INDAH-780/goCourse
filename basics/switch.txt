@@ -1,0 +1,60 @@
+package main
+
+import "fmt"
+
+func main() {
+	// switch statements
+	// i think the difference with other languages is the fact that braek is ommitted after ecvery statement, go those it own automatically
+	// switch expression {
+	// case value1:
+	// 	// code for case 1 to be executed
+	// 	case value1:
+	// 	// code for case 1 to be executed
+	// 	case value1:
+	// 	// code for case 1 to be executed
+	// default:
+	// }
+
+	// fruit := "apple"
+	// switch fruit {
+	// case "banana":
+	// 	fmt.Println("Its's a banana")
+	// case "apple":
+	// 	fmt.Println("It's an apple")
+	// default:
+	// 	fmt.Println("Unknown fruit")
+	// }
+
+	// // checking multiple conditions
+	// day := "Monday"
+	// switch day {
+	// case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+	// fmt.Println("Its a week day")
+	// case "Sunday":
+	// 	fmt.Println("Its weekend")
+	// default:
+	// 	fmt.Println("Invalid day")
+	// }
+
+	// switch case for type assertions
+	checkType(10)
+	checkType(3.14)
+	checkType("Hello")
+	checkType(true)
+
+}
+
+// type assertion
+func checkType(x interface{}){
+
+	switch x.(type){
+	case int: 
+	fmt.Println("It's an Interger")
+	case float64:
+		fmt.Println("It's a float")
+	case string: 
+	fmt.Println("Its a string")
+	default:
+		fmt.Println("Unknown type")
+	}
+}

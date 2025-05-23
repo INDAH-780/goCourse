@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+//allow you to create decision making context in your program
+//syntax
+// if condition {
+// 	block of code
+// }
+
+func main() { 
+// 	age := 15
+// if age >= 20 {
+// 	fmt.Println("you are an adult")
+// } else if (age >= 10){
+// fmt.Println("you are a teeneger")
+// } else {
+// 	fmt.Println("you are a todler")
+// }
+
+// nested if
+num := 15
+if num % 2 == 0 {
+	if num % 3 == 0 {
+		fmt.Println("number is divisible by both 2 and 3")
+	}else {
+		fmt.Println("Number is divisible by 2 but not 3")
+	}
+} else {
+	fmt.Println("Numeber is not divisible by 2")
+}
+}
