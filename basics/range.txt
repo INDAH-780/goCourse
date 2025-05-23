@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+
+func main() { 
+//provides  a way to iterate over various data structures like arrays, slices strings, maps and channels
+message := "Hello world"
+
+for i, v := range message {
+	fmt.Println(i, v) //unicode encoding
+	fmt.Printf("Index: %d, Rune: %c\n", i, v) //printing actual characters
+	
+}
+
+}

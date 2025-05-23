@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+
+func main() { 
+
+result := applyOperation(5, 3, add)
+fmt.Println("5 + 3 =", result)
+
+multiplyBy2 := createMultiplier(2)
+fmt.Println("5 * 2 =", multiplyBy2(5))
+}
+func add(a, b int) int {
+	return a + b
+}
+
+// demonstrating functions that take functions as arguments
+func applyOperation (x int, y int, operation func(int, int) int) int {
+	return operation(x,y)
+}
+
+//demonstratinf function that returns a function
+func createMultiplier(factor int ) func(int) int {
+	return func(x int) int {
+		return x * factor
+	}
+}

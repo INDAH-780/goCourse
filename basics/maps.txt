@@ -1,0 +1,60 @@
+package main
+
+import (
+	"fmt"
+	"maps"
+)
+
+
+func main() { 
+
+// provides a way of storing and retrieving pairs
+// how its defined var m mao[keyType]valueType
+
+//using a map literal
+//syntax: mapVariable = map[KeyType]valueType{
+// key1: value1
+//key2: value2
+//}
+myMap := make(map[string]int)
+fmt.Println(myMap)
+myMap["key1"] = 9
+myMap["code"] = 18
+fmt.Println(myMap)
+fmt.Println(myMap["key1"])
+fmt.Println(myMap["key"])
+
+//deleting an element in a map
+delete(myMap, "key1")
+fmt.Println(myMap)
+//clearing all the content of a map
+myMap["key1"] = 1
+myMap["key2"] = 2
+myMap["key3"] = 3
+fmt.Println(myMap)
+// clear(myMap)
+// fmt.Println(myMap)
+
+//checking a value exist for a given key
+_, ok := myMap["key1"]
+if ok {
+	fmt.Println("a value exist with key1")
+}else {
+	fmt.Println("No value exist with key1")
+}
+//comparing maps
+myMap2 := map[string]int{"a": 1, "b" : 2}
+fmt.Println(myMap2)
+if maps.Equal(myMap, myMap2){
+	fmt.Println("mymap and myMap2 are equal")
+} else {
+	fmt.Println("There are not equal")
+}
+//ranging over maps
+for k, v := range myMap2 {
+	fmt.Println("keys and values:", k, v)
+}
+for _, v := range myMap2 {
+	fmt.Println("values only: ", v)
+}
+} 
