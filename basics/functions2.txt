@@ -1,0 +1,46 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+// returning more than 1 value simultaneously
+// mostly used in returning both the results and an error value
+// to do this, u specify the types of the return values in parantheses after the functions parameter list.
+func main() {
+
+	//syntax
+	// func functionName(parameter1 type1, parameter2 type2,)(returnType1, returnType2){
+	// 	return value1, value2
+	// }
+	q, r := divide(10, 3)
+	fmt.Printf("Qoutient: %d, Remainder: %d ", q, r)
+
+	result, err := compare(3, 3)
+	if err != nil {
+		fmt.Println("error:", err)
+	}else {
+		fmt.Println(result)
+	}
+}
+
+func divide(a, b int) (int, int) {
+	qoutient := a / b
+	remainder := a % b
+	return qoutient, remainder
+
+}
+
+// the benefit of this is error handling
+// hoew to send errors
+func compare(a, b int) (string, error) {
+	if a > b {
+		return "a is greater than b", nil
+	} else if b > a {
+		return "b is greater than a ", nil
+	} else {
+		return "", errors.New("unable to compare which is greater")
+
+	}
+}
