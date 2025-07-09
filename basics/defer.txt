@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+//Allows a function to postpone the execution of a statement untill the surrounding function has completed or we could still say delays the executuion of a function untill the nearby or surrounding function returns
+
+func main() { 
+process()
+
+}
+func process(){
+	defer fmt.Println("defered statement is executed") // the results or out put says it all
+	fmt.Println("normal executed statement")
+}
+
+//looking kindly at the output, 
